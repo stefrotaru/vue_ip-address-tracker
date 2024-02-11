@@ -1,0 +1,97 @@
+@import "../../../styles/variables";
+
+.result-display {
+    background: #fff;
+    color: black;
+    border-radius: $result-display-border-radius;
+    box-shadow: $result-display-box-shadow;
+    padding: 2rem;
+    min-height: 10rem;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    position: absolute;
+    width: 73vw;
+    top: 16rem; // adjust this value
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__card:not(:last-child) {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 85%;
+            width: 1px;
+            background: lighten($dark-gray, 25%);
+        
+        }
+    }
+    &__card:not(:first-child) {
+        padding: 0 2rem;
+
+        &:last-child {
+            padding-right: 0;
+        }
+
+    }
+    &__card:first-child {
+        padding-right: 2rem;
+    }
+    @media screen and (max-width: 1024px){
+        &__card:not(:first-child) {
+            padding: 0 1rem;
+        }
+        &__card:first-child {
+            padding-right: 1rem;
+        }
+    }
+
+    &__card {
+        text-align: left;
+
+        &__title {
+            font-size: .9rem;
+            letter-spacing: .1rem;
+            font-weight: $font-weight-medium;
+            color: $dark-gray;
+            text-transform: uppercase;
+        }
+
+        &__value {
+            font-size: 1.75rem;
+            font-weight: $font-weight-medium;
+            margin: .8rem 0;
+            color: $very-dark-gray;
+
+            &.clearfix {
+                word-break: break-all;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .result-display {
+        display: flex;
+        flex-direction: column;
+        top: 15rem; // adjust this value
+
+
+        &__card:not(:last-child) {
+            &::after {
+                display: none;
+            }
+        }
+        &__card:not(:first-child) {
+            padding: unset;
+        }
+    }
+}

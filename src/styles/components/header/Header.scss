@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+@import './ResultDisplay.scss';
+@import './SearchBar.scss';
+
+.header {
+   background: url('../../../../pattern-bg-desktop.png') no-repeat center center/cover;
+   color: #fff;
+   text-align: center;
+
+   position: relative;
+
+   &__title {
+       font-size: 2rem;
+       font-weight: $font-weight-medium;
+       margin-bottom: 0.5em;
+       margin: 1.1em 0;
+   }
+
+   @media screen and (max-width: 768px) {
+        background: url('../../../../pattern-bg-mobile.png') no-repeat center cover;
+    
+        &__title {
+            font-size: calc(1.2em + 1.8vw);
+        }
+    }
+}

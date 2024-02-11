@@ -44,22 +44,19 @@ Users should be able to:
 - [Vue](https://vuejs.org/) - Javascript library
 - [Sass](https://sass-lang.com/) - CSS preprocessor
 
+- [IPify Geolocation](https://geo.ipify.org/) - Geolocation API
+- [LeafletJS](https://leafletjs.com/) - JS library for mobile-friendly interactive maps
+
 ### What I learned
 
+- refresh
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
 ### Useful resources
 
-- If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [The Markdown Guide](https://www.markdownguide.org/)
+- [API Key best practices from Google Developers](https://developers.google.com/maps/api-key-best-practices)
+- [How to use Mapbox securely](https://docs.mapbox.com/help/troubleshooting/how-to-use-mapbox-securely/)
 
 ## Author
 

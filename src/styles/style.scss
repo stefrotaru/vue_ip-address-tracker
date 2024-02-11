@@ -1,0 +1,39 @@
+@import './_variables.scss';
+@import './fonts.scss';
+
+@import './components/Map.scss';
+@import './components/header/Header.scss';
+
+:root {
+    font-family: $font-family-main;
+    line-height: 1.5;
+    font-weight: 400;
+  
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  #app {
+    margin: 0 auto;
+    text-align: center;
+
+    display: grid;
+    grid-template-rows: 30vh 70vh;
+
+    @media screen and (max-width: 768px) {
+        grid-template-rows: 40vh 60vh;
+        
+    }
+  } 
