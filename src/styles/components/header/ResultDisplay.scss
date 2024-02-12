@@ -6,14 +6,15 @@
     border-radius: $result-display-border-radius;
     box-shadow: $result-display-box-shadow;
     padding: 2rem;
-    min-height: 10rem;
+    // min-height: 10rem;
+    z-index: 2;
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     position: absolute;
     width: 73vw;
-    top: 16rem; // adjust this value
+    top: 14rem; // adjust this value
     left: 0;
     right: 0;
     margin-left: auto;
@@ -34,6 +35,7 @@
         
         }
     }
+
     &__card:not(:first-child) {
         padding: 0 2rem;
 
@@ -42,9 +44,11 @@
         }
 
     }
+
     &__card:first-child {
         padding-right: 2rem;
     }
+
     @media screen and (max-width: 1024px){
         &__card:not(:first-child) {
             padding: 0 1rem;
@@ -82,8 +86,14 @@
     .result-display {
         display: flex;
         flex-direction: column;
-        top: 15rem; // adjust this value
+        align-items: center;
+        gap: .65rem;
+        
+        top: 9.15rem; // adjust this value
+        padding: 1.25rem;
+        width: 80vw;
 
+        top: calc(1.35rem + 30vw);
 
         &__card:not(:last-child) {
             &::after {
@@ -93,5 +103,27 @@
         &__card:not(:first-child) {
             padding: unset;
         }
+        &__card:first-child {
+            padding-right: unset;
+        }
+
+        &__card {
+            text-align: center;
+    
+            &__title {
+                font-size: .65rem;
+            }
+    
+            &__value {
+                font-size: 1.15rem;
+                margin: .35rem 0 0;
+            }
+        }
     }
+}
+
+@media screen and (max-width: 374px) {
+    .result-display {
+        top: 8.5rem; // adjust this value
+    }  
 }

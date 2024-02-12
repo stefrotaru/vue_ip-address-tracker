@@ -4,6 +4,8 @@
 @import './components/Map.scss';
 @import './components/header/Header.scss';
 
+@import "leaflet/dist/leaflet.css";
+
 :root {
     font-family: $font-family-main;
     line-height: 1.5;
@@ -30,10 +32,9 @@
     text-align: center;
 
     display: grid;
-    grid-template-rows: 30vh 70vh;
+    grid-template-rows: 25vh 75vh;
 
     @media screen and (max-width: 768px) {
-        grid-template-rows: 40vh 60vh;
-        
+        grid-template-rows: 30vh 70vh;
     }
   } 
